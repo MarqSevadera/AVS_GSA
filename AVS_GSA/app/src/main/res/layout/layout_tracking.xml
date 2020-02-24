@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:background="@color/dark"
+    tools:context=".Fragments.Tracking">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="28dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:layout_weight="3"
+                android:id="@+id/edtSearch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="@string/flight_code"
+                android:inputType="textCapCharacters"
+                app:met_baseColor="@android:color/white"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelText="@string/flight_code"
+                app:met_iconLeft="@drawable/ic_search"
+                app:met_iconPadding="0dp"
+                app:met_primaryColor="@color/orange"
+                app:met_textColor="@android:color/darker_gray"
+                app:met_underlineColor="@android:color/darker_gray" />
+
+            <info.hoang8f.widget.FButton
+                android:id="@+id/buttonTrack"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="search"
+                android:layout_gravity="center"
+                android:textSize="18sp"
+                app:cornerRadius="10dp"
+                app:fButtonColor="@color/fbutton_color_carrot"
+                app:shadowEnabled="false"/>
+
+
+        </LinearLayout>
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+
+
+
+
+
+</ScrollView>

@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark"
+    xmlns:card_view="http://schemas.android.com/tools"
+    tools:context=".Fragments.NewReservationFrament">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:innerRadius="0dp"
+            android:shape="ring"
+            app:cardCornerRadius="22dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            card_view:cardElevation="12dp"
+            card_view:cardMaxElevation="16dp"
+            card_view:contentPadding="32dp">
+
+            <RelativeLayout
+                android:id="@+id/cardLayout"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:contentDescription="@string/logo" />
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/tvStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:text="Pending"
+                            android:fontFamily="@font/archivo_black"
+                            android:textSize="22sp"/>
+                        <TextView
+                            android:id="@+id/tvFlightNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:text="--- ---"
+                            android:fontFamily="@font/archivo_black"
+                            android:textSize="28sp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv">
+
+            <com.rengwuxian.materialedittext.MaterialAutoCompleteTextView
+                android:id="@+id/edtOrigin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:completionThreshold="1"
+                android:dropDownHeight="wrap_content"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textSize="32sp"
+                android:enabled="false"
+                app:met_baseColor="@android:color/white"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelAlwaysShown="true"
+                app:met_floatingLabelText="@string/origin"
+                app:met_iconLeft="@drawable/ic_location"
+                app:met_iconPadding="0dp"
+                app:met_primaryColor="@color/orange"
+                app:met_underlineColor="@android:color/darker_gray" />
+
+            <android.support.v4.widget.Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <com.rengwuxian.materialedittext.MaterialAutoCompleteTextView
+                android:id="@+id/edtDestination"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:completionThreshold="1"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textSize="32sp"
+                android:enabled="false"
+                app:met_baseColor="@android:color/white"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelAlwaysShown="true"
+                app:met_floatingLabelText="@string/destination"
+                app:met_iconPadding="0dp"
+                app:met_iconRight="@drawable/ic_location"
+                app:met_primaryColor="@color/orange"
+                app:met_underlineColor="@android:color/darker_gray" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edtLength"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="N"
+                android:inputType="numberSigned"
+                android:textAlignment="center"
+                android:textSize="22sp"
+                android:enabled="false"
+                android:maxLines="1"
+                android:singleLine="true"
+                app:met_baseColor="@android:color/white"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelText="@string/length"
+                app:met_floatingLabelAlwaysShown="true"
+                app:met_iconPadding="0dp"
+                app:met_iconRight="@drawable/ic_mult"
+                app:met_primaryColor="@color/orange"
+                app:met_underlineColor="@android:color/darker_gray" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edtWidth"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="N"
+                android:inputType="numberSigned"
+                android:textAlignment="center"
+                android:textSize="22sp"
+                android:enabled="false"
+                android:maxLines="1"
+                android:singleLine="true"
+                app:layout_constraintEnd_toStartOf="@+id/edtHeight"
+                app:layout_constraintStart_toEndOf="@+id/edtLength"
+                app:layout_constraintTop_toBottomOf="@+id/edtOrigin"
+                app:met_baseColor="@android:color/white"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelText="@string/width"
+                app:met_floatingLabelAlwaysShown="true"
+                app:met_iconPadding="0dp"
+                app:met_iconRight="@drawable/ic_mult"
+                app:met_primaryColor="@color/orange"
+                app:met_underlineColor="@android:color/darker_gray" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edtHeight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="N"
+                android:inputType="numberSigned"
+                android:textAlignment="center"
+                android:textSize="22sp"
+                android:enabled="false"
+                android:maxLines="1"
+                android:singleLine="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtDestination"
+                app:met_baseColor="@android:color/white"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelAlwaysShown="true"
+                app:met_floatingLabelText="@string/height"
+                app:met_iconPadding="0dp"
+                app:met_iconRight="@drawable/ic_dimension"
+                app:met_primaryColor="@color/orange"
+                app:met_underlineColor="@android:color/darker_gray" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="28dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edtPieces"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:inputType="numberSigned"
+                android:textAlignment="center"
+                android:textSize="22sp"
+                android:maxLines="1"
+                android:enabled="false"
+                android:singleLine="true"
+                app:met_baseColor="@android:color/white"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelText="@string/pieces"
+                app:met_floatingLabelAlwaysShown="true"
+                app:met_iconLeft="@drawable/ic_number"
+                app:met_iconPadding="0dp"
+                app:met_primaryColor="@color/orange"
+                app:met_underlineColor="@android:color/darker_gray" />
+
+            <android.support.v4.widget.Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edtWeight"
+                android:layout_width="0dp"
+                android:layout_height="63dp"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:inputType="numberDecimal"
+                android:textAlignment="center"
+                android:textSize="22sp"
+                android:enabled="false"
+                android:maxLines="1"
+                android:singleLine="true"
+                app:met_baseColor="@android:color/white"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelText="@string/weight"
+                app:met_floatingLabelAlwaysShown="true"
+                app:met_iconPadding="0dp"
+                app:met_iconRight="@drawable/ic_weight"
+                app:met_primaryColor="@color/orange"
+                app:met_underlineColor="@android:color/darker_gray" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edtDate"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="6"
+                android:enabled="false"
+                android:textAlignment="center"
+                android:textSize="36sp"
+                android:maxLines="1"
+                android:singleLine="true"
+                app:met_baseColor="@android:color/white"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelText="@string/date"
+                app:met_floatingLabelAlwaysShown="true"
+                app:met_primaryColor="@color/orange"
+                app:met_underlineColor="@android:color/darker_gray" />
+
+            <ImageView
+                android:id="@+id/calendar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="false"
+                android:src="@drawable/ic_calendar" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edtDesc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textAlignment="center"
+                android:textSize="28sp"
+                android:enabled="false"
+                app:met_baseColor="@android:color/white"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelAlwaysShown="true"
+                app:met_floatingLabelText="@string/desc"
+                app:met_iconLeft="@drawable/ic_new"
+                app:met_iconPadding="0dp"
+                app:met_primaryColor="@color/orange"
+                app:met_underlineColor="@android:color/darker_gray" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edtName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textAlignment="center"
+                android:textSize="28sp"
+                android:enabled="false"
+                app:met_baseColor="@android:color/white"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelAlwaysShown="true"
+                app:met_floatingLabelText="@string/shipper"
+                app:met_iconLeft="@drawable/ic_person"
+                app:met_iconPadding="0dp"
+                app:met_primaryColor="@color/orange"
+                app:met_underlineColor="@android:color/darker_gray" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edtAddress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textAlignment="center"
+                android:textSize="28sp"
+                android:enabled="false"
+                app:met_baseColor="@android:color/white"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelAlwaysShown="true"
+                app:met_floatingLabelText="@string/shipper_address"
+                app:met_iconLeft="@drawable/ic_home"
+                app:met_iconPadding="0dp"
+                app:met_primaryColor="@color/orange"
+                app:met_underlineColor="@android:color/darker_gray" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edtConName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textAlignment="center"
+                android:textSize="28sp"
+                android:enabled="false"
+                app:met_baseColor="@android:color/white"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelAlwaysShown="true"
+                app:met_floatingLabelText="@string/consignee"
+                app:met_iconLeft="@drawable/ic_person"
+                app:met_iconPadding="0dp"
+                app:met_primaryColor="@color/orange"
+                app:met_underlineColor="@android:color/darker_gray" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edtConAddress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textAlignment="center"
+                android:textSize="28sp"
+                android:enabled="false"
+                app:met_baseColor="@android:color/white"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelAlwaysShown="true"
+                app:met_floatingLabelText="@string/consignee_address"
+                app:met_iconLeft="@drawable/ic_home"
+                app:met_iconPadding="0dp"
+                app:met_primaryColor="@color/orange"
+                app:met_underlineColor="@android:color/darker_gray" />
+
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="64dp" />
+
+            <info.hoang8f.widget.FButton
+                android:id="@+id/btnCancel"
+                android:layout_width="220dp"
+                android:layout_height="83dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="220dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="16dp"
+                android:enabled="false"
+                android:text="@string/cancel"
+                android:textSize="22sp"
+                app:cornerRadius="32dp"
+                app:fButtonColor="@color/orange"
+                app:shadowEnabled="true"
+                app:shadowHeight="5dp" />
+
+        </LinearLayout>
+
+
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</ScrollView>

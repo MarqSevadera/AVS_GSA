@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">AVS_GSA</string>
+    <string name="logo">Logo</string>
+    <string name="aviation">Aviation</string>
+    <string name="solution">Solution</string>
+    <string name="gsa">GSA</string>
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+    <string name="signup">Sign Up</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="username">User Name</string>
+    <string name="address">Address</string>
+    <string name="company">Company</string>
+    <string name="confirmpass">Confirm Password</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_home">Home</string>
+    <string name="welcome">WELCOME!</string>
+    <string name="reservation">reservation</string>
+    <string name="tracking">tracking</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_reset_password">Reset Password</string>
+    <string name="title_activity_signup">Signup</string>
+    <string name="title_activity_select_airline">Select Airline</string>
+    <string name="title_activity_select_flight">Select Flight Number</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="submit">Submit</string>
+    <string name="no_account">Don\'t have an account? Sign up here!</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="origin">Origin</string>
+    <string name="destination">Destination</string>
+    <string name="dimension">Dimension</string>
+    <string name="pieces">Pieces</string>
+    <string name="no_pieces">No. of Pcs.</string>
+    <string name="length">Lenght</string>
+    <string name="width">Width</string>
+    <string name="height">Height</string>
+    <string name="weight">Weight</string>
+    <string name="date">Shipment Date</string>
+    <string name="desc">Description</string>
+    <string name="shipper">Shipper Name</string>
+    <string name="shipper_address">Shipper Address</string>
+    <string name="consignee">Consignee Name</string>
+    <string name="consignee_address">Consignee Address</string>
+    <string name="details">Details</string>
+    <string name="track">Track</string>
+    <string name="empty">We\'ve come up empty!</string>
+    <string name="cancel">Cancel</string>
+    <string name="calendar">Calendar</string>
+    <string name="phone">Phone Number</string>
+    <string name="search">Search</string>
+    <string name="flight_code">Flight Code</string>
+</resources>
+
+

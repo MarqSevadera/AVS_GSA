@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/login.css">
+    <title>Admin Login</title>
+</head>
+
+<body>
+
+
+    <div class="card bg-light simple-login-container">
+        <div class="card-header">
+          <h2>Admin Login</h2>
+        </div>
+
+        <div class="card-body">
+          <div class="row">
+              <div class="col-md-12 form-group">
+              
+                  <input id = "username" type="text" class="form-control" placeholder="Username" required>
+              </div>
+
+          </div>
+          <div class="row">
+              <div class="col-md-12 form-group">
+                  <input id = "password" type="password" placeholder="Password" class="form-control" required>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-12 form-group">
+                  <input id="submit" type="submit" class="btn btn-block btn-login" >
+              </div>
+          </div>
+      </div>
+
+    </div>
+
+
+     <!-- Modal Invalid-->
+     <div class="modal fade" id="modalInvalid" tabindex="-1" role="dialog" aria-labelledby="modalInvalidLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-danger" id="modalInvalidTitle">Invalid Credentials</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                You entered an invalid Credentials!
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+    </div>
+   <!-- End of Modal Invalid-->
+
+  
+  <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+  <script>
+  // Initialize Firebase
+  var config = {
+      apiKey: "AIzaSyDBiBD9k-HPq2fff1be8ZDYiTapAKuNymY",
+      authDomain: "avs-gsa-e40e2.firebaseapp.com",
+      databaseURL: "https://avs-gsa-e40e2.firebaseio.com",
+      projectId: "avs-gsa-e40e2",
+      storageBucket: "avs-gsa-e40e2.appspot.com",
+      messagingSenderId: "986808775904"
+  }; 
+  firebase.initializeApp(config);
+  </script>
+
+  <script>
+
+    $(document).ready(function(){
+      sessionStorage.clear();
+    })
+    $('#submit').click(function(){
+        var username = $('#username').val();
+        var password = $('#password').val();
+
+        if(username != "" && password != "" ){
+          validate(username,password);
+        }
+
+    });
+
+
+
+    function validate(username , password){
+      
+        var database = firebase.database();
+        var ref = database.ref("Admin");
+
+        var admin;
+        ref.once('value',(snapshot) => {
+          admin = snapshot.val();
+          if(admin.username == username && admin.password == password){
+            sessionStorage.setItem("username",username);
+            sessionStorage.setItem("password",password);
+            window.location = "home.html";
+          }else{
+            $('#modalInvalid').modal();
+          }
+        });
+      }
+  </script>
+</body>
+</html>

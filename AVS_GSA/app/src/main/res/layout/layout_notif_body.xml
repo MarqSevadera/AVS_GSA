@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            android:gravity="center_horizontal"
+            android:text="Reservation Id: "
+            android:textColor="@android:color/black"
+            android:textSize="22dp" />
+
+        <TextView
+            android:id="@+id/tvFlight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="KIX-CUL"
+            android:textColor="@android:color/black"
+            android:textSize="48dp" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="22dp"
+            android:text="Reservation Accepted!"
+            android:textColor="@android:color/black"
+            android:textSize="32dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="32dp" />
+
+        <TextView
+            android:id="@+id/tvMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="24dp"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textSize="18dp" />
+
+
+        <android.support.v7.widget.CardView
+            android:layout_margin="12dp"
+            android:id="@+id/cv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:innerRadius="0dp"
+            android:shape="ring"
+            app:cardCornerRadius="22dp"
+            card_view:cardElevation="22dp"
+            card_view:cardMaxElevation="22dp"
+            card_view:contentPaddingLeft="12dp"
+            card_view:contentPaddingRight="12dp">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginTop="22dp"
+                android:layout_marginBottom="22dp"
+                android:layout_marginLeft ="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/tvAirline"
+                    android:textColor="@android:color/black"
+                    android:text="Airline: Jetstar"
+                    android:textSize="22dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvDestination"
+                    android:textColor="@android:color/black"
+                    android:text="Destination: Osaka - Manila"
+                    android:textSize="22dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvFlightNo"
+                    android:textColor="@android:color/black"
+                    android:text="Flight Number: TR 701"
+                    android:textSize="22dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tvAWB"
+                    android:textColor="@android:color/black"
+                    android:text="Airway Bill: 309375"
+                    android:textSize="22dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvDesc"
+                    android:textColor="@android:color/black"
+                    android:text="Cargo Description: Fragile"
+                    android:textSize="22dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                >
+                <TextView
+                    android:id="@+id/tvDimension"
+                    android:textColor="@android:color/black"
+                    android:text="Dimension: 5 x 5 x 5"
+                    android:textSize="22dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvWeight"
+                    android:textColor="@android:color/black"
+                    android:text="Weight: 55 kg"
+                    android:textSize="22dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvPieces"
+                    android:textColor="@android:color/black"
+                    android:text="Pieces: 13"
+                    android:textSize="22dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvConame"
+                    android:textColor="@android:color/black"
+                    android:text="Consignee Name: Badjao Man"
+                    android:textSize="22dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvConAddress"
+                    android:textColor="@android:color/black"
+                    android:text="Consignee Address: NPA"
+                    android:textSize="22dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="32dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="24dp"
+            android:text="Thanks,"
+            android:textColor="@android:color/black"
+            android:textSize="18dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="24dp"
+            android:text="AVS GSA Team"
+            android:textColor="@android:color/black"
+            android:textSize="18dp" />
+
+
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/logo"/>
+
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="69dp" />
+
+    </LinearLayout>
+
+
+
+</ScrollView>
